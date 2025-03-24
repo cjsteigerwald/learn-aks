@@ -24,4 +24,4 @@ jobs:
       - name: list files in workspace
         run: ls -la ${{ github.workspace }}
       - name: list files in GITHUB_WORKSPACE
-        run: echo $(pwd)
+        run: ls -la $GITHUB_WORKSPACE
