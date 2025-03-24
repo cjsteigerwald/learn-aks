@@ -5,6 +5,9 @@ name: Terraform Actions
 # Controls when the workflow will run
 on: push
 
+env:
+  motsId: 14788
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -53,7 +56,8 @@ jobs:
           token-pattern: 'custom'
           token-prefix: '[__'
           token-suffix: '__]'
-          variables: '${{ github.workspace }}/dev.vars.yaml'
+          variables: ${{ toJSON(vars) }}
+          # variables: '${{ github.workspace }}/dev.vars.yaml'
 
       - name: View file
         run: cat ${{ github.workspace }}/vars.auto.tfvars
