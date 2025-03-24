@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: First Workflow
+
+# Controls when the workflow will run
+on: push
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      # - name: Load Env Variables
+      #   run: cat ../../../env.yaml >> $GITHUB_ENV
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Print greeting
+        run: echo "Hello World"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+      - name: Test if works
+        run: echo ${{ github.workspace }}
+      - name: list files in workspace
+        run: ls -la ${{ github.workspace }}
+      - name: list files in GITHUB_WORKSPACE
+        run: echo $(pwd)
