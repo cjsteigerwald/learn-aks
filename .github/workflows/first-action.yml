@@ -57,6 +57,7 @@ jobs:
           token-pattern: 'custom'
           token-prefix: '[__'
           token-suffix: '__]'
+          missing-var-action: 'keep'
           variables: ${{ toJSON(vars) }}
           # variables: '${{ github.workspace }}/dev.vars.yaml'
 
