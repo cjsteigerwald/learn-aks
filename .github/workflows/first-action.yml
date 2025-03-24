@@ -53,7 +53,7 @@ jobs:
           token-pattern: 'custom'
           token-prefix: '[__'
           token-suffix: '__]'
-          variables: '${{ github.workspace }}/dev.vars.(json|jsonc)'
+          variables: '${{ github.workspace }}/dev.vars.yaml'
 
       - name: View file
         run: cat ${{ github.workspace }}/vars.auto.tfvars
