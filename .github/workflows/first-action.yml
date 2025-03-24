@@ -59,7 +59,8 @@ jobs:
           token-suffix: '__]'
           missing-var-action: 'keep'
           # variables: '{"motsId": 14788}'
-          variables: '${{ github.workspace }}/dev.vars.json'
+          # variables: '${{ toJSON(format(${{ github.workspace }}/dev.vars.json)) }}'
+          variables: ${{ toJSON(format('${{ github.workspace }}/dev.vars.json', github.workspace)) }}
 
       - name: View file
         run: cat ${{ github.workspace }}/vars.auto.tfvars
