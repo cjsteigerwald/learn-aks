@@ -61,7 +61,7 @@ jobs:
           # variables: '{"motsId": 14788}'
           # variables: '${{ toJSON(format(${{ github.workspace }}/dev.vars.json)) }}'
           # variables: ${{ toJSON(format('${{ github.workspace }}/dev.vars.yaml', github.workspace)) }}
-          variables: ${{ toJSON(env) }}
+          variables: ${{ toJSON('${{ github.workspace }}/dev.vars.yaml') }}
 
       - name: View file
         run: cat ${{ github.workspace }}/vars.auto.tfvars
