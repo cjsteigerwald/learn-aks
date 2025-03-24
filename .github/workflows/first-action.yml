@@ -26,6 +26,6 @@ jobs:
       - name: list files in GITHUB_WORKSPACE
         run: ls -la $GITHUB_WORKSPACE
       - name: update env vars
-        run: source $GITHUB_WORKSPACE/dev.env.yaml
+        run: env $(./yq r $GITHUB_WORKSPACE/dev.vars.yaml '**' -ppv | sed 's/: /=/' | xargs )
       - name: View mots_Id
-        run: echo $mots_Id
+        run: echo $vars.mots_Id
