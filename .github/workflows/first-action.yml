@@ -60,8 +60,8 @@ jobs:
           missing-var-action: 'keep'
           # variables: '{"motsId": 14788}'
           # variables: '${{ toJSON(format(${{ github.workspace }}/dev.vars.json)) }}'
-          # variables: ${{ toJSON(format('${{ github.workspace }}/dev.vars.json', github.workspace)) }}
-          variables: ${{ toJSON(vars) }}
+          variables: ${{ toJSON(format('${{ github.workspace }}/dev.vars.yaml', github.workspace)) }}
+          # variables: ${{ toJSON(vars) }}
 
       - name: View file
         run: cat ${{ github.workspace }}/vars.auto.tfvars
