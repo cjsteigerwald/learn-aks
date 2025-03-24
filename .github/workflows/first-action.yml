@@ -52,7 +52,7 @@ jobs:
           log-level: 'warn'
           token-prefix: '[__'
           token-suffix: '__]'
-          variables: '**/dev.vars.json'
+          variables: '${{ github.workspace }}/dev.vars.(json|jsonc)''
 
       - name: View file
         run: cat ${{ github.workspace }}/vars.auto.tfvars
