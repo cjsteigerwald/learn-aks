@@ -1,1 +1,1 @@
-yq '.vars' $1 | sed 's/: /=/' >> $GITHUB_ENV
+yq '.vars' $1 | sed 's/: /=/' | xargs -L 1 >> $GITHUB_ENV
