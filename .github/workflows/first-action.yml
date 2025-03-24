@@ -27,5 +27,7 @@ jobs:
         run: ls -la $GITHUB_WORKSPACE
       - name: update env vars
         run: sh ${{ github.workspace }}/.github/workflows/convert.sh ${{ github.workspace }}/dev.vars.yaml
+      - name: view $GITHUB_ENV
+        run: echo $GITHUB_ENV
       - name: View mots_Id
         run: echo $mots_Id
