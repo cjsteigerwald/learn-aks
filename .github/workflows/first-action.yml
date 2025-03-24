@@ -58,7 +58,7 @@ jobs:
           token-prefix: '[__'
           token-suffix: '__]'
           missing-var-action: 'keep'
-          variables: '[${{ toJSON(vars) }}]'
+          variables: '{motsId: 14788}'
           # variables: '${{ github.workspace }}/dev.vars.yaml'
 
       - name: View file
