@@ -51,7 +51,7 @@ jobs:
             **/*.tpl
             **/*.json
             **/*.conf
-            ${{ github.workspace }}/vars.auto.tfvars
+            # ${{ github.workspace }}/vars.auto.tfvars
           root: '${{ github.workspace }}'
           log-level: 'error'
           token-pattern: 'custom'
