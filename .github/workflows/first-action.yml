@@ -25,16 +25,16 @@ jobs:
         run: ls -la ${{ github.workspace }}
       - name: list files in GITHUB_WORKSPACE
         run: ls -la $GITHUB_WORKSPACE
-      - name: view $GITHUB_ENV
-        run: echo $GITHUB_ENV
-      - name: update env vars
-        run: sh ${{ github.workspace }}/.github/workflows/convert.sh ${{ github.workspace }}/dev.vars.yaml
-      - name: view $GITHUB_ENV
-        run: echo $GITHUB_ENV
-      - name: View motsId
-        run: echo $motsId
-      - name: View name
-        run: echo $name
+      # - name: view $GITHUB_ENV
+      #   run: echo $GITHUB_ENV
+      # - name: update env vars
+      #   run: sh ${{ github.workspace }}/.github/workflows/convert.sh ${{ github.workspace }}/dev.vars.yaml
+      # - name: view $GITHUB_ENV
+      #   run: echo $GITHUB_ENV
+      # - name: View motsId
+      #   run: echo $motsId
+      # - name: View name
+      #   run: echo $name
 
       - name: Replace Tokens
         uses: qetza/replacetokens-action@v1
