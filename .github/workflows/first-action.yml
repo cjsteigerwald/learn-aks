@@ -31,7 +31,7 @@ jobs:
         run: sh ${{ github.workspace }}/.github/workflows/convert.sh ${{ github.workspace }}/dev.vars.yaml
       - name: view $GITHUB_ENV
         run: echo $GITHUB_ENV
-      - name: View mots_Id
-        run: echo $mots_Id
+      - name: View motsId
+        run: echo $motsId
       - name: View name
         run: echo $name
