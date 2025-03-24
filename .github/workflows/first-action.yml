@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: First Workflow
+name: Terraform Actions
 
 # Controls when the workflow will run
 on: push
@@ -25,3 +25,7 @@ jobs:
         run: ls -la ${{ github.workspace }}
       - name: list files in GITHUB_WORKSPACE
         run: ls -la $GITHUB_WORKSPACE
+      - name: update env vars
+        run: echo $GITHUB_WORKSPACE/dev.env.yaml >> $GITHUB_ENV
+      - name: View GITHUB_ENV
+        run: echo $GITHUB_ENV
