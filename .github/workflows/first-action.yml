@@ -50,6 +50,7 @@ jobs:
             **/*.conf
           root: '${{ github.workspace }}'
           log-level: 'warn'
+          token-pattern: 'custom'
           token-prefix: '[__'
           token-suffix: '__]'
           variables: '${{ github.workspace }}/dev.vars.(json|jsonc)'
