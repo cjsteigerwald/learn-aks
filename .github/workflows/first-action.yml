@@ -26,6 +26,6 @@ jobs:
       - name: list files in GITHUB_WORKSPACE
         run: ls -la $GITHUB_WORKSPACE
       - name: update env vars
-        uses: ./dev.vars.yaml
+        run: $GITHUB_WORKSPACE/.github/workflows/convert.sh $GITHUB_WORKSPACE/dev.vars.yaml
       - name: View mots_Id
-        run: echo $vars.mots_Id
+        run: echo $mots_Id

@@ -1,0 +1,1 @@
+env $(yq r $1 '**' -ppv | sed 's/: /=/' | xargs)
