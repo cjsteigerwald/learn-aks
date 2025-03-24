@@ -33,3 +33,5 @@ jobs:
         run: echo $GITHUB_ENV
       - name: View mots_Id
         run: echo $mots_Id
+      - name: View name
+        run: echo $name
