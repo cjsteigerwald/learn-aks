@@ -49,7 +49,7 @@ jobs:
             **/*.json
             **/*.conf
           root: '${{ github.workspace }}'
-          log-level: 'warn'
+          log-level: 'debug'
           token-pattern: 'custom'
           token-prefix: '[__'
           token-suffix: '__]'
