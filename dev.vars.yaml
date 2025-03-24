@@ -1,2 +1,3 @@
-motsId: 1234560
-name: chris
+vars:
+  motsId: 1234560
+  name: chris
