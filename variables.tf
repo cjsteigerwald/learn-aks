@@ -8,3 +8,8 @@ variable "location" {
   type        = string
   description = "This defines the location of the resource group and the resources"
 }
+
+variable "motsId" {
+  type        = string
+  description = "This defines the location of the resource group and the resources"
+}

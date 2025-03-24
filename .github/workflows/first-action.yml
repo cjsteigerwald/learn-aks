@@ -35,3 +35,23 @@ jobs:
         run: echo $motsId
       - name: View name
         run: echo $name
+      - name: Replace Tokens
+        uses: qetza/replacetokens-action@v1
+        with:
+          sources: |
+            **/*.tfvars
+            **/*.tf
+            **/*.sh
+            **/*.ps1
+            **/*.tmpl
+            **/*.tpl
+            **/*.json
+            **/*.conf
+          root: '${{ github.workspace }}'
+          log-level: 'warn'
+          token-prefix: '[__'
+          token-suffix: '__]'
+          variables: '@**/dev.vars.(yml|yaml)'
+
+      - name: View file
+        run: cat ${{ github.workspace }}/vars.auto.tfvars
